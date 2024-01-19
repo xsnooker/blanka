@@ -25,8 +25,10 @@ class ProjectResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('name')
                     ->live(onBlur: true)
+                    ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('link')
+                    //->filled()
                     ->maxLength(255),
             ]);
     }
